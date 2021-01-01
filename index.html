@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>作業五</title>
+</head>
+<body>
+	<center><a href="https://timber666.github.io/index/">回首頁</a></center>
+	<script>
+		html = "<table border = '1' align = 'center'>"+
+				"<tr>"+
+				"<td colspan = '3' align = 'center'>九九乘法表</td>"+
+				"</tr>";
+		for ( i = 1; i <= 9; i++) {
+			if (i % 3 == 1) 
+				html += "<tr>";
+			html += "<td>";
+			for ( j = 1; j <= 9; j++) {
+				if ((i*j) <= 9) {
+				html += i + " * " + j + " = "+"&nbsp;&nbsp;"+(i*j) + "<br>" ;
+				}
+				else
+				{
+					html += i + " * " + j + " = "+(i*j) + "<br>";
+				}
+			}
+			html += "</td>";
+			if (i % 3 == 0) 
+				html += "</tr>";
+		}
+		html += "</table>";
+		document.write(html);
+	</script>
+</body>
+</html>
